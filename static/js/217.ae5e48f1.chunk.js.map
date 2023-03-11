@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/217.ae5e48f1.chunk.js","mappings":"iKAQA,UARqB,WACnB,OACE,+BACE,uCAGL,C","sources":["components/Pages/RegisterPage/RegisterPage.jsx"],"sourcesContent":["const RegisterPage = () => {\n  return (\n    <>\n      <div>Register</div>\n    </>\n  );\n};\n\nexport default RegisterPage;\n"],"names":[],"sourceRoot":""}
