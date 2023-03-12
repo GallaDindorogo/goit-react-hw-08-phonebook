@@ -1,10 +1,16 @@
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import { NavigationAuth } from './NavigationAuth/NavigationAuth';
 import { NavigationUser } from './NavigationUser/NavigationUser';
+import { isUserLogin } from '../../redux/auth/auth-selector';
 
 import s from './navigation.module.scss';
 
 export const Navigation = () => {
+  const isLogin = useSelector(isUserLogin);
+  console.log(isLogin);
+
   return (
     <nav className={s.navigation}>
       <ul className={s.navigationList}>
@@ -16,8 +22,8 @@ export const Navigation = () => {
         </NavLink>
       </ul>
       <ul>
-        <NavigationAuth />
-        <NavigationUser />
+        {!isLogin && <NavigationAuth />}
+        {isLogin && <NavigationUser />}
       </ul>
     </nav>
   );

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import styles from './button.module.scss';
 
-const Btn = ({ onClick, type }) => {
+const Btn = ({ children, type = 'submit' }) => {
   return (
-    <div className={styles.ButtonContainer} onClick={onClick}>
-      <button type="button" className={styles.Button}>
-        Go back
+    <div className={styles.ButtonContainer}>
+      <button type={type} className={styles.Button}>
+        {children}
       </button>
     </div>
   );
@@ -13,7 +13,7 @@ const Btn = ({ onClick, type }) => {
 
 export default Btn;
 
-Btn.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
-};
+// Btn.propTypes = {
+//   onClick: PropTypes.func.isRequired,
+//   type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
+// };

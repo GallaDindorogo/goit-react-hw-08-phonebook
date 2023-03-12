@@ -4,8 +4,10 @@ import { combineReducers } from '@reduxjs/toolkit';
 
 import contactsReducer from './contactsSlice';
 import filterReducer from './filterSlice';
+import authReducer from './auth/auth-slice';
 
 const rootReducer = combineReducers({
+  auth: authReducer,
   contacts: contactsReducer,
   filter: filterReducer,
 });
