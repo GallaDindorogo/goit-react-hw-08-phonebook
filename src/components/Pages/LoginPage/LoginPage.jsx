@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { login } from 'redux/auth/auth-operation';
 import { isUserLogin } from 'redux/auth/auth-selector';
 
-import s from './loginPage.module.scss';
+// import s from './loginPage.module.scss';
 
 import LoginForm from 'components/LoginForm/LoginForm';
 
