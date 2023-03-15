@@ -13,13 +13,13 @@ const ContactFilter = () => {
 
   return (
     <div className={styles.formGroup}>
-      <h4>Find</h4>
+      <h4>Filtr contact</h4>
       <input
         className={styles.inputStyle}
         name="filter"
         value={filter}
         onChange={handleFilter}
-        placeholder="tel"
+        placeholder="find tel.number"
       />
     </div>
   );

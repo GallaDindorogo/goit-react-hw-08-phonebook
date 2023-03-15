@@ -12,8 +12,8 @@ export const NavigationUser = () => {
     dispatch(logout());
   };
   return (
-    <div>
-      <p>{name}</p>
+    <div className={s.navigation}>
+      <p className={s.nameUser}>{name}</p>
       <button className={s.Button} onClick={onLogout}>
         Logout
       </button>

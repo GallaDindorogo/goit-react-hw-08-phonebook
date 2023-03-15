@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import styles from './contactForm.module.scss';
 
 import { fetchAllContacts, fetchAddContact } from 'redux/contactsOperations';
+import Btn from 'schare/Button/Button';
 
 const ContactForm = () => {
   let inputValues = {
@@ -50,10 +51,11 @@ const ContactForm = () => {
           className={styles.inputName}
           name="name"
           onChange={handleChange}
-          placeholder="Name"
+          placeholder="Enter name"
           type="text"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          size="50"
           required
         />
       </div>
@@ -63,14 +65,17 @@ const ContactForm = () => {
           className={styles.inputNumber}
           name="number"
           onChange={handleChange}
-          placeholder="tel.number"
+          placeholder="Enter tel.number"
           type="tel"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          size="50"
           required
         />
       </div>
-      <button type="submit">Add contact</button>
+      <Btn className={styles.contactFormButton} type="submit">
+        Add contact
+      </Btn>
     </form>
   );
 };

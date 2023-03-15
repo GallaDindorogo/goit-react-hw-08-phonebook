@@ -6,6 +6,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
+
 import App from 'components/App';
 import AuthLayout from 'components/AuthLayout/AuthLayout';
 
@@ -20,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <AuthLayout>
           <BrowserRouter basename="/goit-react-hw-08-phonebook">
             <App />
+            <NotificationContainer />
           </BrowserRouter>
         </AuthLayout>
       </PersistGate>

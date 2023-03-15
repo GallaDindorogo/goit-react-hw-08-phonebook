@@ -38,22 +38,27 @@ const ContactList = () => {
   };
 
   const filtredContacts = getVisibleContacts();
+  const isContacts = Boolean(filtredContacts.length);
 
   const contacts = filtredContacts.map(({ name, number, id }) => (
     <li className={styles.item} key={id}>
-      <p className={styles.contact}>
-        {name} .....tel. {number}
-      </p>
+      <p className={styles.contact}>{name}</p>
+      <p className={styles.contact}>.....tel. {number}</p>
       <button className={styles.btn} onClick={() => handleDeleteContact(id)}>
         Delete
       </button>
     </li>
   ));
   return (
-    <ol className={styles.list}>
-      {isLoading && <Loader />}
-      {contacts}
-    </ol>
+    <div>
+      <ol className={styles.list}>
+        {isLoading && <Loader />}
+        {contacts}
+      </ol>
+      {!isContacts && (
+        <p className={styles.text}> No contacts in the list yet</p>
+      )}
+    </div>
   );
 };
 

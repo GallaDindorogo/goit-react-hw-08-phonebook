@@ -2,6 +2,7 @@
   display: flex;
   gap: 30px;
   justify-content: flex-end;
+  align-items: center;
   margin-right: 40px;
 }
 
@@ -17,7 +18,9 @@
   font-weight: bold;
   color: rgb(164, 192, 10);
   font-size: 24px;
-  &.active {
-    color: purple;
-  }
+}
+
+.navigationItem:global(.active) {
+  color: purple;
+  font-weight: bold;
 }

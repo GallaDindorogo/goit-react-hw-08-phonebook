@@ -1,8 +1,17 @@
+.bookBody {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to left,
+      transparent,
+      rgba(98, 68, 111, 0.9)
+    ),
+    url(../../schare/Tropical.svg);
+}
 .wrapper {
-  display: grid;
-  grid-template-columns: 600px 600px;
-  margin-left: 40px;
-
+  display: flex;
+  flex-direction: column;
+  margin: 5px 400px;
   gap: 30px;
 }
 
@@ -11,6 +20,19 @@
   border: 1px solid;
   border-radius: 5px;
   padding: 15px;
+}
+
+.form {
+  background-color: rgb(184, 164, 193);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #000;
+  padding: 1px 5px;
+  border-radius: 5px;
+  box-shadow: 0.5rem 0.5rem 2rem rgb(167, 164, 164),
+    -0.5rem -0.5rem 2rem rgb(172, 171, 171);
 }
 
 h3 {
