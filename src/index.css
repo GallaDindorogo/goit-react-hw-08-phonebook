@@ -9,11 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-size: cover;
   background-image: linear-gradient(
-      to left,
-      transparent,
-      rgba(98, 68, 111, 0.9)
-    ),
-    url(./schare/booksFon.jpg);
+    to left,
+    transparent,
+    rgba(98, 68, 111, 0.9)
+  );
 }
 
 code {

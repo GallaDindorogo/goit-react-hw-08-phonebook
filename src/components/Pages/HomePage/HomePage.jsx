@@ -1,7 +1,12 @@
+import s from './homePage.module.scss';
+
 const HomePage = () => {
   return (
     <>
-      <div>Home</div>
+      <div className={s.homePageBody}>
+        <div className={s.homePageImg}></div>
+        <div> Welcome to the phone-book!</div>
+      </div>
     </>
   );
 };

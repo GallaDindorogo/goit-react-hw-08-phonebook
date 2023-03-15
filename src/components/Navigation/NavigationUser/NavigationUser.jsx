@@ -1,13 +1,22 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { getUser } from 'redux/auth/auth-selector';
+import { logout } from 'redux/auth/auth-operation';
+import s from './navigationUser.module.scss';
 
 export const NavigationUser = () => {
   const { name } = useSelector(getUser);
+  const dispatch = useDispatch();
+
+  const onLogout = () => {
+    dispatch(logout());
+  };
   return (
     <div>
       <p>{name}</p>
-      <button>Logout</button>
+      <button className={s.Button} onClick={onLogout}>
+        Logout
+      </button>
     </div>
   );
 };

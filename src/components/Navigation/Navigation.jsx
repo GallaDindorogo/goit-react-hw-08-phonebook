@@ -9,7 +9,7 @@ import s from './navigation.module.scss';
 
 export const Navigation = () => {
   const isLogin = useSelector(isUserLogin);
-  console.log(isLogin);
+  console.log('Navig', isLogin);
 
   return (
     <nav className={s.navigation}>
