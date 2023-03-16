@@ -1,5 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-// import * as api from 'schare/services/contacts-api';
+
+import { NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
+
 import {
   getAllContacts,
   deleteContacts,
@@ -41,7 +44,7 @@ export const fetchAddContact = createAsyncThunk(
       });
       console.log(result);
       if (result) {
-        alert(`${name}. Tel. ${number} is already exist`);
+        NotificationManager.info(`${name}. Tel. ${number} is already exist`);
         return false;
       }
     },

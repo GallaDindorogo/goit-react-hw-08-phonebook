@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
+
 import { signup, login, current, logout } from './auth-operation';
 
 const initialState = {
@@ -43,6 +46,8 @@ const authSlice = createSlice({
       .addCase(login.rejected, (state, { payload }) => {
         state.loading = false;
         state.error = payload;
+        const error = payload ? payload : 'Sorry... Something went wrong...';
+        NotificationManager.error(error);
       })
 
       .addCase(current.pending, state => {
@@ -60,6 +65,8 @@ const authSlice = createSlice({
         state.loading = false;
         state.token = '';
         state.error = payload;
+        const error = payload ? payload : 'Sorry... Something went wrong...';
+        NotificationManager.error(error);
       })
 
       .addCase(logout.pending, state => {
@@ -75,6 +82,8 @@ const authSlice = createSlice({
       .addCase(logout.rejected, (state, { payload }) => {
         state.loading = false;
         state.error = payload;
+        const error = payload ? payload : 'Sorry... Something went wrong...';
+        NotificationManager.error(error);
       });
   },
 });
